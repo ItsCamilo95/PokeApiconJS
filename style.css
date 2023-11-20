@@ -41,6 +41,7 @@ nav ul li:last-child a{
     padding: 3px 6px;
     background-color: rgb(29, 27, 27);
     border: 2px solid #ff9800;
+    color: #ff9800;
     border-radius: 8px;
     font-weight: 700;
     font-size: 1.4em;
@@ -82,22 +83,30 @@ main{
     height: 50px;
     background-color: rgb(29, 27, 27);
     border-radius: 10px;
-    color: white;
     font-weight: 700;
-    cursor: pointer;
     font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu .poke-button{
     border: 2px solid #FAD61D;
+    color: #FAD61D;
 }
 
 .menu .digi-button{
     border: 2px solid #ff9800;
+    color: #ff9800;
 }
 
-.menu-items:hover, nav ul li:last-child a:hover{
+.menu-items:hover, 
+nav ul li:last-child a:hover{
     border: 2px solid #15ff00;
     box-shadow: 4px 4px #15ff00;
+    color: #15ff00;
     transition: all 0.25s ease-in-out;
 }
+
