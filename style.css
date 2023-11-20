@@ -45,7 +45,7 @@ nav ul li:last-child a{
     border-radius: 8px;
     font-weight: 700;
     font-size: 1.4em;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .profile-info{
@@ -131,4 +131,19 @@ main .search-container .search-button{
     border-radius: 8px;
     color: #FAD61D;
     cursor: pointer;
+    transition: all 0.7s ease-in-out;
+
+}
+
+@media only screen and (max-width: 600px){
+    main .search-container{
+        display: block;
+    }
+
+    main .search-container .search-button,
+    main .search-container .search-input{
+        width: 100%;
+        padding: 15px;
+        margin: 10px;
+    }
 }
