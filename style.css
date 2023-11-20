@@ -103,10 +103,32 @@ main{
 }
 
 .menu-items:hover, 
-nav ul li:last-child a:hover{
+nav ul li:last-child a:hover,
+main .search-container .search-button:hover{
     border: 2px solid #15ff00;
     box-shadow: 4px 4px #15ff00;
     color: #15ff00;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
+main .search-container{
+    display: flex;
+}
+
+main .search-container .search-input{
+    border: 1px solid white;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+main .search-container .search-button{
+    padding: 0px 15px;
+    background-color: rgb(29, 27, 27);
+    font-size: 1.2em;
+    border: 2px solid #FAD61D;
+    border-radius: 8px;
+    color: #FAD61D;
+    cursor: pointer;
+}
