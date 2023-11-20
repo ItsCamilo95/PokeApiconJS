@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: rgb(34, 31, 31);
+    color: white;
+}
+
+nav{
+    height: 10vh;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+nav ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li:last-child a{
+    padding: 3px 6px;
+    background-color: rgb(29, 27, 27);
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.4em;
+    transition: all 0.5s ease-in-out;
+}
+
+.profile-info{
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    text-decoration: underline;
+    text-decoration-color: #FAD61D;
+}
+
+.profile-info img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+main{
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    margin-top: -80px;
+}
+
+.menu{
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.menu .menu-items{
+    width: calc(50% - 10px);
+    height: 50px;
+    background-color: rgb(29, 27, 27);
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.menu .poke-button{
+    border: 2px solid #FAD61D;
+}
+
+.menu .digi-button{
+    border: 2px solid #ff9800;
+}
+
+.menu-items:hover, nav ul li:last-child a:hover{
+    border: 2px solid #15ff00;
+    box-shadow: 4px 4px #15ff00;
+    transition: all 0.25s ease-in-out;
+}
