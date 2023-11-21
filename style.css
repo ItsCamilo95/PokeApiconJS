@@ -63,22 +63,21 @@ nav ul li:last-child a{
 }
 
 main{
-    height: 90vh;
     width: 100%;
+    height: 50vh;
     display: grid;
     place-content: center;
     place-items: center;
-    margin-top: -80px;
+    padding: 20px;
 }
 
-.menu{
-    width: 110%;
+.search-container{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0px;
 }
 
-.menu .menu-items{
+.search-container .menu-items{
     width: calc(50% - 10px);
     height: 50px;
     background-color: rgb(29, 27, 27);
@@ -92,27 +91,25 @@ main{
     align-items: center;
 }
 
-.menu .poke-button{
+.search-container .poke-button{
     border: 2px solid #FAD61D;
     color: #FAD61D;
 }
 
-.menu .digi-button{
+.search-container .digi-button{
     border: 2px solid #ff9800;
     color: #ff9800;
 }
 
 .menu-items:hover, 
 nav ul li:last-child a:hover,
-main .search-container .search-button:hover{
+main .search-container .search-button:hover,
+.cards-container li button:hover,
+.cards-container .list-control button:hover{
     border: 2px solid #15ff00;
     box-shadow: 4px 4px #15ff00;
     color: #15ff00;
-    transition: all 0.2s ease-in-out;
-}
-
-main .search-container{
-    display: flex;
+    transition: all 0.1s ease-in-out;
 }
 
 main .search-container .search-input{
@@ -132,18 +129,60 @@ main .search-container .search-button{
     color: #FAD61D;
     cursor: pointer;
     transition: all 0.7s ease-in-out;
-
 }
+
+.cards-container{
+    display: grid;
+    place-items: center;
+}
+
+.cards-container li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.cards-container li button{
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(29, 27, 27);
+    cursor: pointer;
+    border: 2px solid #ff9800;
+    border-radius: 6px;
+    color: #ff9800;
+    transition: all 0.7s ease-in-out;
+}
+
+.cards-container .control-buttons{
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(29, 27, 27);
+    cursor: pointer;
+    border: 2px solid #FAD61D;
+    border-radius: 6px;
+    color: #FAD61D;
+    transition: all 0.7s ease-in-out;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 5px;
+}
+
 
 @media only screen and (max-width: 600px){
     main .search-container{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     main .search-container .search-button,
     main .search-container .search-input{
         width: 100%;
-        padding: 15px;
-        margin: 10px;
+        padding: 20px;
+        margin: 10px 0;
     }
+
+    .cards-container .control-buttons{
+        width: 100%;
+    }
+
 }
