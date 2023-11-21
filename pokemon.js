@@ -43,6 +43,7 @@ const searchPokemon = (pokemon) => {
     fetch( pokeURL+pokemon)
 		.then( respuesta => respuesta.json() )
 		.then( datos => {
+			loader.classList.remove('show-loader');		
 			pokeList.innerHTML+= `<li><button onclick="loadInfoPokemon('${pokeURL+pokemon}')" style="text-transform: capitalize;">${datos.id+" - "+datos.name}</button></li>`;
 		})
 		.catch(notFound);
@@ -60,6 +61,7 @@ const loadInfoPokemon = (url) =>{
 	.then( datos => {
 		pokemonImg.src =datos.sprites.other.dream_world.front_default;
 		namePokemon.textContent = datos.name;
+		document.body.classList.add("modal-static");
 
 		for (let i = 0; i < datos.stats.length; i++) {
 			pokemonStats.innerHTML+=`<li>${datos.stats[i].stat.name.replace('-', ' ')} : ${datos.stats[i].base_stat}</li>`
@@ -75,6 +77,7 @@ const loadInfoPokemon = (url) =>{
 }
 
 const hideModal = () => {
+	document.body.classList.remove("modal-static");
 	modal.classList.remove('modal-show');
 	pokemonStats.innerHTML='';
 	pokemonAbilities.innerHTML='';
