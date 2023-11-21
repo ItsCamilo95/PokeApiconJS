@@ -84,16 +84,6 @@ const hideModal = () => {
 	pokemonImg.src="";
 }
 
-window.addEventListener('pageshow', function(event) {
-	if (event.persisted && modal.classList.contains('modal-show')) {
-		document.body.classList.remove("modal-static");
-		modal.classList.remove('modal-show');
-		pokemonStats.innerHTML='';
-		pokemonAbilities.innerHTML='';
-		pokemonImg.src="";
-	}
-  }, false);
-
 inputSearchPokemon.addEventListener('keyup', (event) => {
 	if (event.key === 'Enter') {
 		const pokemonValue = inputSearchPokemon.value;
