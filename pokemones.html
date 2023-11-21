@@ -29,12 +29,40 @@
                 <button class="search-button" id="searchButton">Buscar</button>
             </div>
     </main>
+    <div class="terminal-loader" id="loader" onclick="hola()">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
+        </div>
+        <div class="text">Loading...</div>
+      </div>
     <div class="cards-container">
         <ul id="pokeList">
-            
+              
         </ul>
         <div class="list-control">
             
+        </div>
+    </div>
+    <div class="modal" id="modal1">
+        <div class="modal-container" id="modal-container">
+            <h1 id="name-pokemon"></h1>
+            <div class="pokemon-details" id="pokemon-details">
+                <img src="" alt="" id="pokemon-img">
+                <ul id="pokemon-stats">
+                </ul>
+            </div>
+            <h1>Habilidades Destacadas</h1>
+            <div class="pokemon-abilities" id="pokemon-abilities">
+                
+            </div>
+            <button type="button" class="close-button digi-button" onclick="hideModal()">
+                  Cerrar
+           </button>
         </div>
     </div>
     <script src="pokemon.js"></script>
